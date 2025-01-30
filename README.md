@@ -15,3 +15,24 @@ JOIN person p ON mca.person_id = p.person_id
 WHERE mcr.job = 'Director'
 GROUP BY p.person_name
 ORDER BY num_of_directors DESC;
+
+ 3. List all movies with their respective genres, directors, and release years.
+    SELECT 
+    genre.genre_name, 
+    YEAR(movie.release_date) AS release_year, 
+    person.person_name
+FROM 
+    movie
+JOIN 
+    movie_genre ON movie.movie_id = movie_genre.movie_id
+JOIN 
+    genre ON genre.genre_id = movie_genre.genre_id
+JOIN 
+    movie_crew ON movie.movie_id = movie_crew.movie_id
+JOIN 
+    person ON person.person_id = movie_crew.person_id
+WHERE 
+    movie_crew.job = 'Director';
+
+
+
