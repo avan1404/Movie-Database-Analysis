@@ -34,5 +34,13 @@ JOIN
 WHERE 
     movie_crew.job = 'Director';
 
+4. Find the top 5 highest-grossing movies along with their release years.
+SELECT movie_id, title, 
+    YEAR(release_date) AS release_year
+FROM 
+    movie
+ORDER BY 
+    revenue DESC
+LIMIT 5;
 
 
