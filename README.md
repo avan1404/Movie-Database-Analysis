@@ -44,3 +44,19 @@ ORDER BY
 LIMIT 5;
 
 
+5. List the names of actors who have acted in more than 10 movies, ordered by the number of movies they’ve appeared in.
+SELECT person_name, movie_id,  title 
+FROM 
+    movie 
+JOIN 
+    movie_cast ON movie.movie_id = movie_cast.movie_id 
+JOIN 
+    person ON movie_cast.person_id = person.person_id 
+GROUP BY 
+    person_name, movie_id, title 
+HAVING 
+    COUNT(DISTINCT movie_id) > 10 
+ORDER BY 
+    movie_id;
+
+
