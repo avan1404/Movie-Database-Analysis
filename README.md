@@ -59,4 +59,11 @@ HAVING
 ORDER BY 
     movie_id;
 
+   6.Find the average rating of movies within each genre.
+SELECT m.movie_id, m.title, g.genre_name, m.votes_avg  
+FROM movie m  
+JOIN movie_genre mg ON m.movie_id = mg.movie_id  
+JOIN genre g ON mg.genre_id = g.genre_id;
+
+
 
