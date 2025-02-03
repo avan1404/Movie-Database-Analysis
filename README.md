@@ -4,11 +4,15 @@ This project involves analyzing a movie database using SQL (PostgreSQL/MySQL) to
 
 Key Features:
 
-Complex SQL queries using JOIN, GROUP BY, HAVING
-Data cleaning and normalization
-Data aggregation and filtering to summarize key metrics
-Query optimization for large datasets
-Real-world application of SQL skills for data exploration
+- Complex SQL queries using JOIN, GROUP BY, HAVING
+
+- Data cleaning and normalization
+
+- Data aggregation and filtering to summarize key metrics
+
+ - Query optimization for large datasets
+
+- Real-world application of SQL skills for data exploration
 
 
 
